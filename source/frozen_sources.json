@@ -1,0 +1,120 @@
+{
+  "source_snapshot_sha256": "5c64acd760d4c2f990f3bb403a75b1f7e05dcfe5182fa54df491cf97a6ed1f9f",
+  "included_files": [
+    {
+      "path": "src/ram_vram_finetune/experiments/nf4_stage_worker.py",
+      "bytes": 53032,
+      "sha256": "713e90a4f7035af7e7dc10f01e50aafba932eeb432a3ce907774a0b7f81e6b3b",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/experiments/nf4_full_train.py",
+      "bytes": 37970,
+      "sha256": "78f91d71ec95ba273dc9b734e3810923d7e05153e30b53c5f82d034f31b352cc",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/experiments/nf4_execution.py",
+      "bytes": 62116,
+      "sha256": "da6cdebaed068acf85d71d720e481863304bcd8bd236158750d2f7a038dc5199",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/experiments/nf4_train_data.py",
+      "bytes": 10218,
+      "sha256": "8f4e7481a549bc9feebab1fb9fc355174ef5b500c812a71376d91824c07aff42",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/experiments/nf4_inference_stage.py",
+      "bytes": 33008,
+      "sha256": "1e5140674dab8e341b112232f1258221c505d6a61abfdaa37c8c1bd322595256",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/experiments/nf4_inference_runtime.py",
+      "bytes": 38225,
+      "sha256": "45c3d8e8f930b242397cd20888e621a86939659d0c2c7e2b7aef0489e37319d3",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/experiments/nf4_scoring_stage.py",
+      "bytes": 16226,
+      "sha256": "88585c98766d417f7faf1f20d72ef6b27a997003198c2c3ea10b09253188032a",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/experiments/nf4_final_analysis.py",
+      "bytes": 16257,
+      "sha256": "b5c27e258fa80c04a2ee237f90ecfee4eb0f1aea8d74569ae2ffb82c654cad7a",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/adapters/qwen35/nf4_native.py",
+      "bytes": 26843,
+      "sha256": "d26d874b5a7ee1cc1f721edc8c3e75326842856d8d25bb6a49f198365ffc2b16",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/adapters/qwen35/nf4_cuda.py",
+      "bytes": 29705,
+      "sha256": "3f89f9fff2eb7355530f88f017eee410a1651ae98bfeb6ef79bdc3cd8e6f89a8",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/training/nf4_native_memory.py",
+      "bytes": 2285,
+      "sha256": "774d3d68972e095bd11f155ed717c1cb84be4978159a614e61f05ab5ce67b69f",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/training/nf4_cuda_recompute.py",
+      "bytes": 22288,
+      "sha256": "a142ea87958763d67855c1a9b6b9754b92d18df01482fe4db20998f73aa24ab9",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/training/nf4_cuda_pool.py",
+      "bytes": 33565,
+      "sha256": "77963e3d4bf533a2f8b38907edb12d3ec49ccd52392392064fa9d82ee66b58c3",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/training/nf4_preflight.py",
+      "bytes": 4463,
+      "sha256": "6a2d9f75e10a26ec161bbf046558494a676bc1fa9a2f412f31b1265e3296fc45",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/training/nf4_streaming.py",
+      "bytes": 26163,
+      "sha256": "5ef4637b2e08f2b3430377c86ca9696304dc6781af29ecccbdc6bfcf12212a3a",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/quantization/nf4_backend_cuda.py",
+      "bytes": 39347,
+      "sha256": "f277be4b35fe28c41ca56c97cbeb58812a6da5818b1361d5f0189e47c6ec4149",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/quantization/native_terminal.py",
+      "bytes": 2668,
+      "sha256": "43f4d9aed95befd79145c2707b348ef7a554d24d2c5c684ad4c2ce6459f39b30",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/checkpoint_io/nf4_cuda_training.py",
+      "bytes": 53358,
+      "sha256": "a6f2e50066488cf2b476ef4d432689b1fa918d1f9b09da7bdc65541b3f5b2bca",
+      "content": "frozen source, copied byte-for-byte"
+    },
+    {
+      "path": "src/ram_vram_finetune/checkpoint_io/nf4_training.py",
+      "bytes": 30112,
+      "sha256": "ab0125b8da44348870d1f6510b0b586153ad33f9e6f98ea006d2ca758fd96cf5",
+      "content": "frozen source, copied byte-for-byte"
+    }
+  ],
+  "scope": "Training, inference, scoring, checkpoint, and NF4 native/streaming control-path source excerpt. This is a code evidence bundle, not a standalone replay package."
+}

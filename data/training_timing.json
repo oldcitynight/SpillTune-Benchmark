@@ -1,0 +1,28 @@
+[
+  {
+    "arm": "independent_native_resident",
+    "training_with_saves_host_seconds": 3658.70447922,
+    "startup_train_save_close_host_seconds": 3666.7963108480003,
+    "checkpoint_save_host_seconds": 0.5409169309997992,
+    "updates": 500,
+    "microbatches": 3000,
+    "execution_domain": "LOCAL_OS_STARTUP_NOT_GPU_QUALIFICATION",
+    "execution_permission": false,
+    "status": "TRAIN_ONLY_PROFILE_FILE_COMPLETE",
+    "run_profile_sha256": "9a9c03b68df193c1c4555bbaacf28be3fb12404a0281c4119f5f7f4639c97fd0",
+    "updates_sha256": "8805f3c57ff1d833d00e5c69b5da1be84b2e8266a0e1bcefe4139c854f62d9b1"
+  },
+  {
+    "arm": "spilltune_streaming",
+    "training_with_saves_host_seconds": 4576.399138559,
+    "startup_train_save_close_host_seconds": 4587.618698630001,
+    "checkpoint_save_host_seconds": 0.5294085549990086,
+    "updates": 500,
+    "microbatches": 3000,
+    "execution_domain": "LOCAL_OS_STARTUP_NOT_GPU_QUALIFICATION",
+    "execution_permission": false,
+    "status": "TRAIN_ONLY_PROFILE_FILE_COMPLETE",
+    "run_profile_sha256": "9a9c03b68df193c1c4555bbaacf28be3fb12404a0281c4119f5f7f4639c97fd0",
+    "updates_sha256": "e8cad604fa4e9279b8658dd54720346c80634ac1459ae0c2ac0a17bc8e74619b"
+  }
+]

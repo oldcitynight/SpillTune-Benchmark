@@ -1,0 +1,200 @@
+{
+  "scope": "R112 formal final POST_TRAIN; sanitized release-data recomputation",
+  "dataset": {
+    "training_rows": 1500,
+    "evaluation_items": 500,
+    "source_revision": "openai/grade-school-math@3101c7d5072418e28b9008a6636bde82a006892c"
+  },
+  "protocol": {
+    "updates_per_arm": 500,
+    "microbatches_per_arm": 3000,
+    "gradient_accumulation": 6,
+    "repeat_count": 1,
+    "repeat_index": 0,
+    "checkpoint_updates": [
+      0,
+      100,
+      200,
+      300,
+      400,
+      500
+    ]
+  },
+  "outputs": {
+    "rows": 1000,
+    "paired_outputs": 500,
+    "text_token_stop_exactly_equal": true,
+    "stop_reason_counts_by_arm": {
+      "independent_native_resident": {
+        "eos": 499,
+        "max_new_tokens": 1
+      },
+      "spilltune_streaming": {
+        "eos": 499,
+        "max_new_tokens": 1
+      }
+    }
+  },
+  "judgments": {
+    "rows": 5000,
+    "channels": [
+      "codex_56_sol_max",
+      "codex_61_sol_max",
+      "codex_6_astra_max",
+      "codex_6_luna_max",
+      "numeric"
+    ],
+    "effective_equals_raw": true,
+    "score_summary": [
+      {
+        "channel": "codex_56_sol_max",
+        "native_correct": 404,
+        "streaming_correct": 403,
+        "n_per_arm": 500,
+        "native_accuracy": 0.808,
+        "streaming_accuracy": 0.806,
+        "difference_percentage_points": -0.2,
+        "paired_streaming_lower_equal_higher": [
+          1,
+          499,
+          0
+        ]
+      },
+      {
+        "channel": "codex_61_sol_max",
+        "native_correct": 404,
+        "streaming_correct": 404,
+        "n_per_arm": 500,
+        "native_accuracy": 0.808,
+        "streaming_accuracy": 0.808,
+        "difference_percentage_points": 0.0,
+        "paired_streaming_lower_equal_higher": [
+          0,
+          500,
+          0
+        ]
+      },
+      {
+        "channel": "codex_6_astra_max",
+        "native_correct": 404,
+        "streaming_correct": 403,
+        "n_per_arm": 500,
+        "native_accuracy": 0.808,
+        "streaming_accuracy": 0.806,
+        "difference_percentage_points": -0.2,
+        "paired_streaming_lower_equal_higher": [
+          1,
+          499,
+          0
+        ]
+      },
+      {
+        "channel": "codex_6_luna_max",
+        "native_correct": 406,
+        "streaming_correct": 403,
+        "n_per_arm": 500,
+        "native_accuracy": 0.812,
+        "streaming_accuracy": 0.806,
+        "difference_percentage_points": -0.6,
+        "paired_streaming_lower_equal_higher": [
+          3,
+          497,
+          0
+        ]
+      },
+      {
+        "channel": "numeric",
+        "native_correct": 402,
+        "streaming_correct": 402,
+        "n_per_arm": 500,
+        "native_accuracy": 0.804,
+        "streaming_accuracy": 0.804,
+        "difference_percentage_points": 0.0,
+        "paired_streaming_lower_equal_higher": [
+          0,
+          500,
+          0
+        ]
+      }
+    ]
+  },
+  "training_loss": {
+    "sequence_identical": true,
+    "count_per_arm": 500,
+    "first": 0.7787922024726868,
+    "last": 0.559810221195221,
+    "mean": 0.4936317078,
+    "median": 0.4903827757
+  },
+  "training_time": {
+    "training_with_saves_host_seconds": {
+      "independent_native_resident": 3658.70447922,
+      "spilltune_streaming": 4576.399138559
+    },
+    "startup_train_save_close_host_seconds": {
+      "independent_native_resident": 3666.7963108480003,
+      "spilltune_streaming": 4587.618698630001
+    },
+    "streaming_vs_native_percent_change": 25.1
+  },
+  "sampled_resources": {
+    "sample_count": {
+      "independent_native_resident": 3514,
+      "spilltune_streaming": 4411
+    },
+    "whole_device_smi_memory_used_peak_bytes": {
+      "independent_native_resident": 3938451456,
+      "spilltune_streaming": 2176843776
+    },
+    "whole_device_smi_peak_streaming_vs_native_percent_change": -44.7,
+    "worker_rss_peak_bytes": {
+      "independent_native_resident": 7858012160,
+      "spilltune_streaming": 9269006336
+    },
+    "worker_rss_peak_streaming_vs_native_percent_change": 18.0,
+    "cgroup_memory_peak_bytes": {
+      "independent_native_resident": 10712842240,
+      "spilltune_streaming": 9664671744
+    },
+    "cgroup_memory_peak_streaming_vs_native_percent_change": -9.8,
+    "cgroup_swap_peak_bytes": {
+      "independent_native_resident": 0,
+      "spilltune_streaming": 0
+    },
+    "cgroup_io_read_null_samples": 7925,
+    "cgroup_io_write_null_samples": 7925,
+    "cgroup_io_missing_samples": 7925
+  },
+  "checkpoint_state": {
+    "published_fingerprints_equal_between_arms": true,
+    "tensor_payloads_included": false,
+    "binary_equality_independently_verifiable_from_release": false,
+    "sha256_by_update": {
+      "0": "9e89bbeed061b29c52a0c571a292b2a302946dab5802e4636cf289304a73a5e9",
+      "100": "3e6130922e83e635d0cf6f1691d3e127f3c8fb67274cd5080a8388cc0ef3f483",
+      "200": "f8a0c33d16ad29d9d6d6d1bd9b3ec39e741d9b964b9192024d3146956e1adb3c",
+      "300": "0fd6b5b919c3b58e9bf58f526b9e4042921ccc5bbd408ea389944842d5a32b97",
+      "400": "c3a526760c2090e120b2708df2fce8ed58045016bd6baa8134b9d543b837aca1",
+      "500": "6864efa30bd61960a80a4446e266ca25a0c5c64cb0f05a1468168112553580b1"
+    },
+    "bytes_per_state": {
+      "0": 41987296,
+      "100": 41987296,
+      "200": 41987296,
+      "300": 41987296,
+      "400": 41987296,
+      "500": 41987296
+    }
+  },
+  "interpretation_limits": [
+    "The comparison is a single local run pair, not a statistical equivalence or generalization result.",
+    "The comparator is independent_native_resident: packed NF4 records and QuantState remain CUDA resident, with native non-reentrant activation checkpointing. It is not a GPU offload comparator.",
+    "SMI memory is a whole-device sampled peak, not process-exclusive allocation or an instantaneous guaranteed peak.",
+    "The run is tagged LOCAL_OS_STARTUP_NOT_GPU_QUALIFICATION; no independent GPU qualification is claimed.",
+    "The selected model repository revision was not pinned and weights are not included; exact rerun of the model computation is not guaranteed.",
+    "Only 19 frozen source bodies are included from the 559-file source snapshot; the full-run environment cannot be reconstructed from the source index alone.",
+    "Checkpoint equality is recomputed from published SHA-256/length fingerprints; checkpoint tensor payloads are not included for independent re-hashing.",
+    "The judgment lane labels reproduce stored labels and do not independently authenticate backend identities.",
+    "Cgroup I/O metrics are unavailable in the source record; no I/O throughput is claimed."
+  ]
+}

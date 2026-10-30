@@ -1,0 +1,148 @@
+{
+  "classification": "sanitized-derived release metadata; original local files not included",
+  "source_snapshot_sha256": "5c64acd760d4c2f990f3bb403a75b1f7e05dcfe5182fa54df491cf97a6ed1f9f",
+  "dataset_repository": "https://github.com/openai/grade-school-math",
+  "dataset_revision": "3101c7d5072418e28b9008a6636bde82a006892c",
+  "original_sources": [
+    {
+      "source": "training.sqlite",
+      "bytes": 4116480,
+      "sha256": "251b6101daafd2dbeb341fe1420cd46c36e9a4a670635d20beb71a0e46db1bf9"
+    },
+    {
+      "source": "scoring.sqlite",
+      "bytes": 286720,
+      "sha256": "00e5ed45d9d4a91591c3f40fda69f97ae4948f9b92cdde90a8ca12121a8daaa9"
+    },
+    {
+      "source": "POST_TRAIN/results.sqlite",
+      "bytes": 34910208,
+      "sha256": "7668b4b4172fb7a15286c022cbd82e9885ffd9a349bcbc639e58854246852ceb"
+    },
+    {
+      "source": "TRAINING_MANIFEST.json",
+      "bytes": 32594,
+      "sha256": "654ca05e2781da0852e1aad7a6906b8a5330cef3c3a86221676b8ecfd2a15cb4"
+    },
+    {
+      "source": "POST_TRAIN/MANIFEST.json",
+      "bytes": 1586498,
+      "sha256": "92099612ee92fe16c97cc5a92eb04f234e5b3cc7519159547af6429f0713827b"
+    },
+    {
+      "source": "NATIVE_PLAN.json",
+      "bytes": 27417,
+      "sha256": "7099be4d254f7ff7769d6e45f581b22abf518b8f11a6b04a5ed99d5b17315731"
+    },
+    {
+      "source": "STREAMING_PLAN.json",
+      "bytes": 27383,
+      "sha256": "4b4ff8573d099f83976a1b564833ef9dc7d51af1e4fb5120b6d4925740c29957"
+    },
+    {
+      "source": "PAIR.json",
+      "bytes": 1125,
+      "sha256": "71a6938eeb4b7a2eea62c0c879396263e3edef275c1e409879d44c4fdb3aa4e0"
+    },
+    {
+      "source": "SHARED_BINDING.json",
+      "bytes": 1882,
+      "sha256": "485c8ea5a12e98aead5ff732610b072130bf79268bac76c65380b3af65ff7b0b"
+    },
+    {
+      "source": "native UPDATES.jsonl",
+      "bytes": 155505,
+      "sha256": "8805f3c57ff1d833d00e5c69b5da1be84b2e8266a0e1bcefe4139c854f62d9b1"
+    },
+    {
+      "source": "streaming UPDATES.jsonl",
+      "bytes": 155618,
+      "sha256": "e8cad604fa4e9279b8658dd54720346c80634ac1459ae0c2ac0a17bc8e74619b"
+    },
+    {
+      "source": "native SAMPLES.jsonl",
+      "bytes": 4532448,
+      "sha256": "595bda1e17dd2863ded7b09865c00b6579f96f1970fdac9aa18128dd099e4613"
+    },
+    {
+      "source": "streaming SAMPLES.jsonl",
+      "bytes": 5707335,
+      "sha256": "25b9002534e83880e6f2884ac9c47c60249afe51eaa81bfdf020c437d191e049"
+    },
+    {
+      "source": "native TRAIN_HANDOFF.json",
+      "bytes": 1919,
+      "sha256": "35512c6728302fb9d82ec5c6e33ee9af9ef71c11dff1a6e4f336af9427729b61"
+    },
+    {
+      "source": "streaming TRAIN_HANDOFF.json",
+      "bytes": 1911,
+      "sha256": "42273c83d899cfd82ce98ba07a7a0b8e58b1a6eab50880f8dcfa7569cfa515f8"
+    },
+    {
+      "source": "native HOST_PREFLIGHT.json",
+      "bytes": 56188,
+      "sha256": "2b117926155ac5c31673821dd7a3b7c43f6bcb9c51421255625fa9da9f45450f"
+    },
+    {
+      "source": "streaming HOST_PREFLIGHT.json",
+      "bytes": 48197,
+      "sha256": "ce679e353141369d7645527c6105b7bb0466075478eb4099cb57b197acf4ac36"
+    },
+    {
+      "source": "native RUN_BINDING.json",
+      "bytes": 9589,
+      "sha256": "d786ee174193530efc2be3b7f44a5989ebab10e0fc01a4db1a61f2318b6a3f88"
+    },
+    {
+      "source": "streaming RUN_BINDING.json",
+      "bytes": 9858,
+      "sha256": "ed30f481256f77d1f3cb890bc1196bdc066271e2b1fe2c50a46648a70af43924"
+    },
+    {
+      "source": "native hardware/BINDING.json",
+      "bytes": 1541,
+      "sha256": "712653fb5339e895daf8843f484e0e5d6c2ea5321b9c1fb53470bff57f67f970"
+    },
+    {
+      "source": "streaming hardware/BINDING.json",
+      "bytes": 1539,
+      "sha256": "e2702abfa2fb1af796310820397ed8fed7b0ce00c63c93fc207a6579e855888b"
+    },
+    {
+      "source": "native hardware/COMMAND.json",
+      "bytes": 73,
+      "sha256": "9a72efa7963fffa457498fc38f43421a67db27c0971cbf5aa00821fdd435a4a6"
+    },
+    {
+      "source": "streaming hardware/COMMAND.json",
+      "bytes": 73,
+      "sha256": "9a72efa7963fffa457498fc38f43421a67db27c0971cbf5aa00821fdd435a4a6"
+    },
+    {
+      "source": "native HARDWARE.json",
+      "bytes": 75616,
+      "sha256": "56e37bbed7fa9ec600fed2331366f6be9e0728c9cf87095aaad3859f7e69ab2f"
+    },
+    {
+      "source": "streaming HARDWARE.json",
+      "bytes": 75915,
+      "sha256": "0f8193d55e7fce9e95d72bc8e8d3e5b358e38adba9e84712b744a9fa12cbace3"
+    }
+  ],
+  "transformations": [
+    "SQLite containers were not copied. Evaluation question/answer columns and training token columns were extracted into stable UTF-8 CSV/JSONL; their field values are unchanged.",
+    "Inference rows retain item, arm, split, checkpoint, repeat index, stop reason, generated token IDs, and exact output text. Run identity objects, job IDs, and hashes were dropped.",
+    "Judgment rows retain channel label, item, arm, raw/effective correctness, and stop reason. Actor, transport, session, request, and backend identity fields were dropped.",
+    "Training update UTC timestamps and absolute monotonic clocks were dropped; measured interval, loss, token counts, microbatch count, and update number remain.",
+    "Hardware samples retain numeric measurements and relative monotonic offsets from each arm's first sample. Absolute UTC, GPU UUID, host, process, cgroup path, binding, and collector identity fields were dropped. Process I/O counters are distinct from cgroup I/O counters; the latter are absent where the source sampler reports E_CGROUP_IO_MISSING.",
+    "Checkpoint state bytes are not included; only the byte lengths and SHA-256 digests of the six saved states per arm are included.",
+    "The public environment table selectively extracts GPU model/capability and CUDA device memory, kernel release, NVIDIA driver and recorded framework-library versions, plus preflight available-memory snapshots. It publishes SHA-256/size references for the historical source records but strips their host, UUID, PID, cgroup, absolute-path, and process metadata. CPU model, physical RAM total, Python version, OS distribution release, and system CUDA toolkit version were not captured in the retained source records; no current-host values are substituted."
+  ],
+  "omitted": [
+    "original SQLite database files and private manifests",
+    "TUI frame payloads, actor/session records, provider request/session identifiers, and raw transport payloads",
+    "absolute machine paths, PIDs, cgroup paths, GPU UUIDs, local caches, and environment secrets",
+    "model weights, adapters, and checkpoint tensors"
+  ]
+}

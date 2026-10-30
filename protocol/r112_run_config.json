@@ -1,0 +1,181 @@
+{
+  "schema": "spilltune.benchmark.r112_public_config.v1",
+  "run_id": "r112-formal-manual-multi-user-20261026T1033",
+  "execution_pair": [
+    "independent_native_resident",
+    "spilltune_streaming"
+  ],
+  "source_snapshot_sha256": "5c64acd760d4c2f990f3bb403a75b1f7e05dcfe5182fa54df491cf97a6ed1f9f",
+  "recipe": {
+    "adapter": "qwen35_nf4_dq_bf16c",
+    "quantization": "NF4 with double quantization",
+    "compute_dtype": "bfloat16",
+    "adapter_dtype": "float32",
+    "base_model_path": "Qwen3.5 text path",
+    "model_repository": "huihui-ai/Huihui-Qwopus3.5-4B-v3-abliterated",
+    "base_model_repository": "Jackrong/Qwopus3.5-4B-v3",
+    "model_revision_pinned": false,
+    "lora_rank": 8,
+    "lora_alpha": 16.0,
+    "seed": 20261019,
+    "context_length": 1024,
+    "optimizer": {
+      "class": "torch.optim.AdamW",
+      "learning_rate": 0.0002,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "epsilon": 1e-08,
+      "weight_decay": 0.0,
+      "foreach": false,
+      "fused": false
+    },
+    "training_rows": 1500,
+    "training_passes": 2,
+    "presentations": 3000,
+    "updates": 500,
+    "microbatches_per_update": 6,
+    "gradient_accumulation": 6,
+    "repeat_count": 1,
+    "repeat_index": 0,
+    "checkpoint_updates": [
+      0,
+      100,
+      200,
+      300,
+      400,
+      500
+    ]
+  },
+  "evaluation": {
+    "dataset_rows": 500,
+    "split": "final",
+    "checkpoint": 500,
+    "decoding": "greedy",
+    "max_new_tokens": 512,
+    "context_length": 1024,
+    "judgment_channels": [
+      "codex_56_sol_max",
+      "codex_61_sol_max",
+      "codex_6_astra_max",
+      "codex_6_luna_max",
+      "numeric"
+    ],
+    "effective_correct_definition": "raw_correct AND stop_reason == 'eos'"
+  },
+  "execution": {
+    "native_memory_policy": "decoder_checkpoint_nonreentrant_v1",
+    "native_nf4_weights_resident_on_cuda": true,
+    "streaming_nf4_layer_staging": "pinned CPU to CUDA per decoder layer and per forward/backward",
+    "streaming_backward": "recompute original native decoder layer and collect gradients",
+    "same_frozen_source_and_initialization": true,
+    "separate_worker_processes_plans_and_checkpoint_roots": true,
+    "execution_domain": "LOCAL_OS_STARTUP_NOT_GPU_QUALIFICATION",
+    "cpu_contract_only": false,
+    "execution_permission": false
+  },
+  "analysis_boundary": {
+    "one_local_run_pair": true,
+    "statistical_equivalence_claim": false,
+    "universal_performance_claim": false,
+    "gpu_qualification_claim": false,
+    "cpu_or_gpu_offload_comparator": false,
+    "model_weights_included": false
+  },
+  "environment": {
+    "scope": "Historical fields captured by the R112 per-arm preflight, runtime binding, and hardware command records; not the current host.",
+    "gpu_model": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_compute_capability": [
+      8,
+      9
+    ],
+    "cuda_device_count": 1,
+    "cuda_device_total_memory_bytes": 8184725504,
+    "cpu_model": null,
+    "host_ram_total_bytes": null,
+    "host_ram_available_at_preflight_bytes": {
+      "independent_native_resident": 31410716672,
+      "spilltune_streaming": 30622216192
+    },
+    "os_distribution_release": null,
+    "kernel_release": "7.0.0-38-generic",
+    "nvidia_driver_version": "580.178.04",
+    "torch_cuda_build": "13.0",
+    "torch_cuda_runtime_version": "13.0",
+    "cuda_runtime": "cuda",
+    "bitsandbytes_cuda_library": "libbitsandbytes_cuda130.so",
+    "system_cuda_toolkit_version": null,
+    "torch_version": "2.13.0+cu130",
+    "transformers_version": "5.13.0",
+    "bitsandbytes_version": "0.50.2",
+    "python_version": null,
+    "qualification": "LOCAL_OS_STARTUP_NOT_GPU_QUALIFICATION; no independent GPU qualification is claimed.",
+    "source_records": [
+      {
+        "source": "native HOST_PREFLIGHT.json",
+        "bytes": 56188,
+        "sha256": "2b117926155ac5c31673821dd7a3b7c43f6bcb9c51421255625fa9da9f45450f"
+      },
+      {
+        "source": "streaming HOST_PREFLIGHT.json",
+        "bytes": 48197,
+        "sha256": "ce679e353141369d7645527c6105b7bb0466075478eb4099cb57b197acf4ac36"
+      },
+      {
+        "source": "native RUN_BINDING.json",
+        "bytes": 9589,
+        "sha256": "d786ee174193530efc2be3b7f44a5989ebab10e0fc01a4db1a61f2318b6a3f88"
+      },
+      {
+        "source": "streaming RUN_BINDING.json",
+        "bytes": 9858,
+        "sha256": "ed30f481256f77d1f3cb890bc1196bdc066271e2b1fe2c50a46648a70af43924"
+      },
+      {
+        "source": "native hardware/BINDING.json",
+        "bytes": 1541,
+        "sha256": "712653fb5339e895daf8843f484e0e5d6c2ea5321b9c1fb53470bff57f67f970"
+      },
+      {
+        "source": "streaming hardware/BINDING.json",
+        "bytes": 1539,
+        "sha256": "e2702abfa2fb1af796310820397ed8fed7b0ce00c63c93fc207a6579e855888b"
+      },
+      {
+        "source": "native hardware/COMMAND.json",
+        "bytes": 73,
+        "sha256": "9a72efa7963fffa457498fc38f43421a67db27c0971cbf5aa00821fdd435a4a6"
+      },
+      {
+        "source": "streaming hardware/COMMAND.json",
+        "bytes": 73,
+        "sha256": "9a72efa7963fffa457498fc38f43421a67db27c0971cbf5aa00821fdd435a4a6"
+      },
+      {
+        "source": "native HARDWARE.json",
+        "bytes": 75616,
+        "sha256": "56e37bbed7fa9ec600fed2331366f6be9e0728c9cf87095aaad3859f7e69ab2f"
+      },
+      {
+        "source": "streaming HARDWARE.json",
+        "bytes": 75915,
+        "sha256": "0f8193d55e7fce9e95d72bc8e8d3e5b358e38adba9e84712b744a9fa12cbace3"
+      }
+    ],
+    "redaction": "Hostname, device UUID, PID, cgroup path, absolute paths, and local process metadata are not published."
+  },
+  "source_availability": {
+    "frozen_snapshot_file_count": 559,
+    "frozen_source_bodies_included": 19,
+    "remaining_snapshot_source_bodies_included": false,
+    "spilltune_public_commit": "d8764fbed6004897c74afd14ba5e34875dc3d6a2",
+    "included_paths_byte_identical_in_public_commit": 6,
+    "included_path_present_but_different": [
+      "src/ram_vram_finetune/adapters/qwen35/nf4_cuda.py"
+    ],
+    "included_paths_absent_from_public_commit": 12,
+    "complete_r112_replay_from_this_release": false,
+    "aggregate_verifier_scope": "Recompute published summaries from sanitized exports; does not train, infer, score, re-hash omitted checkpoint tensors, or recreate the historical environment."
+  }
+}
